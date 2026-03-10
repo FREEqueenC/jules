@@ -29,7 +29,7 @@ describe('Jules MCP Server', () => {
 
     expect(mockExecFile).toHaveBeenCalledWith(
       'jules',
-      ['remote', 'new', '--repo', 'test-repo', '--session', 'test task'],
+      ['remote', 'new', '--repo=test-repo', '--session=test task'],
       { encoding: 'utf8' },
       expect.any(Function)
     );

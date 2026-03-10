@@ -28,7 +28,7 @@ export async function startNewJulesTask(
   dependencies: { execFile: typeof execFile } = { execFile }
 ): Promise<CallToolResult> {
   return new Promise((resolve) => {
-    dependencies.execFile('jules', ['remote', 'new', '--repo', repo_name, '--session', user_task_description], { encoding: 'utf8' }, (error: ExecFileException | null, stdout: string, stderr: string) => {
+    dependencies.execFile('jules', ['remote', 'new', `--repo=${repo_name}`, `--session=${user_task_description}`], { encoding: 'utf8' }, (error: ExecFileException | null, stdout: string, stderr: string) => {
       if (error) {
         resolve({
           content: [
