@@ -67,7 +67,10 @@ server.tool(
   'start_new_jules_task',
   'Starts a new Jules task.',
   {
-    repo_name: z.string().describe('The name of the repository in username/repo_name format.'),
+    repo_name: z
+      .string()
+      .regex(/^[a-zA-Z0-9._-]+\/[a-zA-Z0-9._-]+$/)
+      .describe('The name of the repository in username/repo_name format.'),
     user_task_description: z.string().describe('The description of the user task.'),
   },
   (input: {
