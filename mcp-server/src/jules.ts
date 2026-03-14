@@ -10,7 +10,7 @@ import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { CallToolResult } from '@modelcontextprotocol/sdk/types.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { z } from 'zod';
-import { exec, execFile, ExecFileException } from 'child_process';
+import { execFile, ExecFileException } from 'child_process';
 
 const server = new McpServer({
   name: 'jules-mcp-server',
